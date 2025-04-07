@@ -31,39 +31,8 @@ Voici un peu les relations qu'il y a :
 Schématisons tout ça pour avoir un overview des relations qui existent entre les entités : 
 
 ### Diagramme au format Mermaid🧜‍♀️ :
-```mermaid
-erDiagram
-    passengers {
-        INTEGER id PK
-        TEXT first_name
-        TEXT last_name
-        INTEGER age
-    }
-    airlines {
-        INTEGER id PK
-        TEXT name
-        TEXT concourse
-    }
-    flights {
-        INTEGER id PK
-        INTEGER flight_number
-        INTEGER airline_id FK
-        TEXT departure_airport
-        TEXT arrival_airport
-        DATETIME departure_datetime
-        DATETIME arrival_datetime
-    }
-    check_ins {
-        INTEGER id PK
-        INTEGER passenger_id FK
-        INTEGER flight_id FK
-        DATETIME checkin_datetime
-    }
+![Editor _ Mermaid Chart-2025-04-07-010043](https://github.com/user-attachments/assets/812f06ca-5a90-4488-a063-646398b06aad)
 
-    passengers ||--o{ check_ins : has
-    airlines ||--o{ flights : operates
-    flights ||--o{ check_ins : has
-```
 ---
 ## Structure du projet
 - schema.sql # Code SQL principal (création, insertion, nettoyage) où on va :
@@ -74,5 +43,5 @@ erDiagram
 ---
 Source: https://cs50.harvard.edu/sql/2023/psets/2/atl/
 
-Documentation SQLite: https://www.sqlite.org/index.html (ps: ça m'a beaucoup aidé)
+Documentation SQLite: https://www.sqlite.org/index.html (***ps: ça m'a beaucoup aidé***)
 
